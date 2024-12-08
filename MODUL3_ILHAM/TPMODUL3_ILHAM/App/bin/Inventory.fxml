@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InventoryController">
+   <children>
+      <GridPane layoutX="10.0" layoutY="10.0" hgap="10" vgap="10">
+         <children>
+            <TableView fx:id="tabelAlbum" prefHeight="200.0" prefWidth="550.0" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2">
+               <columns>
+                  <TableColumn fx:id="kolomNamaAlbum" text="Nama Album" />
+                  <TableColumn fx:id="kolomArtis" text="Artis" />
+                  <TableColumn fx:id="kolomTotal" text="Total" />
+                  <TableColumn fx:id="kolomAvailable" text="Available" />
+               </columns>
+               <placeholder>
+                  <Label text="Belum ada data album." />
+               </placeholder>
+            </TableView>
+            <Label text="Nama Album:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="namaAlbumField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Artis:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="artisField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Total:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="totalField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Rented:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <TextField fx:id="rentedField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button text="Tambah" onAction="#tambah" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <Button text="Hapus" onAction="#hapus" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Button text="Update" onAction="#update" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <Button text="Rent Selected" onAction="#sewa" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
